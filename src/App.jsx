@@ -13,6 +13,11 @@ const App = () => {
     settodos([...todos,task]);
     settask("");
   }
+
+  const deleteTodo = (index) => {
+    const updatedTodos = todos.filter((_,i) => i !== index);
+    settodos(updatedTodos);
+  }
   return (
 
     <div className='min-h-screen bg-gray-100 flex justify-center items-center'>
